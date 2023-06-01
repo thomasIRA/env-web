@@ -1,0 +1,108 @@
+/* GENERIC */
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+/* ELEMENTS */
+
+body {
+    margin: 0;
+    padding: 8vw;
+}
+
+main {
+    margin-top: 50px;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+h3 {
+    font-size: max(1.17em, 1.7vw);
+}
+
+p {
+    letter-spacing: .02em;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* OBJECTS */
+
+/* espacements */
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+
+/* COMPONENTS */
+
+/* grid */
+
+.grid {
+    display: grid;
+    position: relative;
+}
+
+.grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2vw;
+}
+
+.grid__item {
+    width: 100%;
+}
+
+
+/* video-game */
+
+.video-game {
+    cursor: pointer;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    transform: scale(1);
+    transition: transform .3s ease;
+}
+
+.video-game:hover {
+    transform: scale(1.05);
+}
+
+.video-game__name {
+    align-items: center;
+    color: white;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    letter-spacing: .07em;
+    padding: 20px;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.video-game__name::before {
+    content: "";
+    background-color: rgba(0, 0 , 0, .25);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
